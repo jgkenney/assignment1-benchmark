@@ -1,31 +1,22 @@
 import threading
-# from time import sleep as s
 import time
 
-def Start():
-    print("START\n")
-    global start
-    start = time.time()
+def Benchmark():
+    operations = 0
+    while operations < 10000000000:
+        operations+=1
 
-def End():
-    print("END\n")
-    global end
+def main():
+    print("START")
+    start = time.time()
+    Benchmark()
     end = time.time()
     elapsed = (end-start)
     print(elapsed)
-
-def Benchmark():
-    global operations
-    operations = 0
-    while operations < 10:
-        operations+=1
+    print("END\n")
 
 
-def main():
-    Start()
-    Benchmark()
-    End()
-
+main()
 #     int(iops = 0)
 #     operations / time = iops
 #     print(iops)
