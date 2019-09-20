@@ -1,10 +1,11 @@
-import threading
 import time
+
 
 def Benchmark():
     operations = 0
-    while operations < 10000000000:
-        operations+=1
+    while operations < 10000000:
+        operations += 1
+
 
 def main():
     print("START")
